@@ -1,0 +1,4 @@
+files/node_modules/
+files/.env
+files/.env.example
+files/package-schema.json
