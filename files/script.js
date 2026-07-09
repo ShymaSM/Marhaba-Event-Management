@@ -93,8 +93,9 @@ if (enquiryForm) {
 
         try {
             // Determine API URL based on environment
-            const API_URL = window.location.protocol === 'file:' || window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-                ? 'http://localhost:5000/api/enquiries' 
+            const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.hostname.startsWith('192.168.');
+            const API_URL = window.location.protocol === 'file:' || isLocal
+                ? `http://${window.location.hostname === '' ? 'localhost' : window.location.hostname}:5000/api/enquiries` 
                 : '/api/enquiries';
 
             // 3. API Submission
