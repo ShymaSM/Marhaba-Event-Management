@@ -26,14 +26,14 @@
       "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/files/server.js"
+      "source": "/api/(.*)",
+      "destination": "/files/server.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "/files/$1"
+      "source": "/(.*)",
+      "destination": "/files/$1"
     }
   ]
 }
