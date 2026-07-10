@@ -41,6 +41,11 @@
     box-sizing: border-box;
 }
 
+img, picture, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+}
+
 html {
     scroll-behavior: smooth;
 }
